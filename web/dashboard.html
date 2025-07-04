@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sage-Bitrix Sync Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div class="dashboard">
+      <!-- Header -->
+      <div class="header">
+        <h1>🚀 Sage-Bitrix Sync Dashboard</h1>
+        <p>
+          Centralized management for all your clients - No desktop installation
+          required!
+        </p>
+      </div>
+
+      <!-- SaaS vs Desktop Comparison -->
+      <div class="comparison-banner">
+        <div class="comparison-title">🎯 SaaS Advantage Demo</div>
+        <div class="vs-grid">
+          <div class="vs-column">
+            <div class="vs-label">❌ Old Desktop Approach</div>
+            <ul class="vs-points">
+              <li>• Install on each client PC</li>
+              <li>• Manual updates per client</li>
+              <li>• No centralized monitoring</li>
+              <li>• Separate configs everywhere</li>
+            </ul>
+          </div>
+          <div class="vs-divider">VS</div>
+          <div class="vs-column">
+            <div class="vs-label">✅ New SaaS Approach</div>
+            <ul class="vs-points">
+              <li>• Zero client installation</li>
+              <li>• Update once, affects all</li>
+              <li>• Real-time monitoring</li>
+              <li>• Centralized management</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Stats Grid -->
+      <div class="stats-grid">
+        <div class="stat-card">
+          <div class="stat-number" id="totalClients">3</div>
+          <div class="stat-label">Active Clients</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number" id="syncJobs">24</div>
+          <div class="stat-label">Sync Jobs Today</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number" id="totalSocios">156</div>
+          <div class="stat-label">Socios Synced</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number">99.8%</div>
+          <div class="stat-label">Uptime</div>
+        </div>
+      </div>
+
+      <!-- Clients Section -->
+      <div class="clients-section">
+        <div class="section-header">
+          <h2 class="section-title">Client Management</h2>
+          <button class="add-client-btn" onclick="addNewClient()">
+            + Add Client
+          </button>
+        </div>
+
+        <div class="clients-grid" id="clientsGrid">
+          <!-- Client cards will be inserted here by JavaScript -->
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
