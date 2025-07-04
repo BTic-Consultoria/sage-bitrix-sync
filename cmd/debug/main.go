@@ -7,8 +7,8 @@ import (
 	"os"
 	"time"
 
-	"github.com/BTic-Consultoria/sage-bitrix-sync/internal/bitrix"
-	"github.com/BTic-Consultoria/sage-bitrix-sync/internal/config"
+	"github.com/arduriki/sage-bitrix-sync/internal/bitrix"
+	"github.com/arduriki/sage-bitrix-sync/internal/config"
 )
 
 func main() {

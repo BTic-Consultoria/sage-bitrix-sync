@@ -7,7 +7,7 @@ import (
 	"log"
 
 	_ "github.com/microsoft/go-mssqldb" // SQL Server driver
-	"github.com/BTic-Consultoria/sage-bitrix-sync/internal/models"
+	"github.com/arduriki/sage-bitrix-sync/internal/models"
 )
 
 // SocioRepository handles database operations for Socio entities

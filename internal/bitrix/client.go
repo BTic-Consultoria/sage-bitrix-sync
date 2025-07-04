@@ -12,7 +12,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/BTic-Consultoria/sage-bitrix-sync/internal/models"
+	"github.com/arduriki/sage-bitrix-sync/internal/models"
 )
 
 // Client handles Bitrix24 API operations using only standard library.
@@ -73,7 +73,7 @@ type BitrixListResponse struct {
 }
 
 // Constants for Bitrix24
-const EntityTypeSocios = 130
+const EntityTypeSocios = 1032
 
 // doJSONRequest performs a JSON POST request and handles common patterns.
 func (c *Client) doJSONRequest(ctx context.Context, endpoint string, requestBody interface{}, response interface{}) error {

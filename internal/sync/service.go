@@ -8,10 +8,10 @@ import (
 	"log"
 	"time"
 
-	"github.com/BTic-Consultoria/sage-bitrix-sync/internal/bitrix"
-	"github.com/BTic-Consultoria/sage-bitrix-sync/internal/config"
-	"github.com/BTic-Consultoria/sage-bitrix-sync/internal/models"
-	"github.com/BTic-Consultoria/sage-bitrix-sync/internal/repository"
+	"github.com/arduriki/sage-bitrix-sync/internal/bitrix"
+	"github.com/arduriki/sage-bitrix-sync/internal/config"
+	"github.com/arduriki/sage-bitrix-sync/internal/models"
+	"github.com/arduriki/sage-bitrix-sync/internal/repository"
 )
 
 // Service handles the complete synchronization process.
