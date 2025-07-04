@@ -1,4 +1,3 @@
-// internal/config/config.go
 package config
 
 import (
@@ -10,7 +9,6 @@ import (
 )
 
 // Config holds all configuration for our application
-// In Go, we use structs instead of classes
 type Config struct {
 	// Database configuration - equivalent to your App.config DB settings
 	SageDB SageDBConfig `json:"sage_db"`
@@ -32,8 +30,6 @@ type Config struct {
 }
 
 // SageDBConfig represents SQL Server connection details
-// Note: In Go, field names starting with capital letters are "exported" (public)
-// This is equivalent to your DB_HOST, DB_PORT, etc. from App.config
 type SageDBConfig struct {
 	Host     string `json:"host"` // Can include named instance like "SERVER\\INSTANCE"
 	Port     int    `json:"port"`
@@ -72,9 +68,8 @@ type SyncConfig struct {
 }
 
 // Load loads configuration from environment variables
-// In Go, functions that can fail return an error as the last return value
 func Load() (*Config, error) {
-	// Load .env file if it exists (similar to your App.config)
+	// Load .env file if it exists
 	_ = godotenv.Load()
 
 	config := &Config{
@@ -115,7 +110,6 @@ func Load() (*Config, error) {
 }
 
 // Validate checks if all required configuration is present
-// This is a method on the Config struct (like a method in your C# class)
 func (c *Config) Validate() error {
 	if c.SageDB.Host == "" {
 		return fmt.Errorf("SAGE_DB_HOST is required")
@@ -138,11 +132,11 @@ func (c *Config) GetConnectionString() string {
 	// For SQL Server named instances, we need to format properly
 	// The Go mssql driver expects: server=host\\instance;port=port;database=db;user id=user;password=pass
 	return fmt.Sprintf("server=%s;port=%d;database=%s;user id=%s;password=%s;encrypt=disable;trustServerCertificate=true",
-		c.SageDB.Host,     // This can include named instance like "SRVSAGE\\SAGEEXPRESS"
-		c.SageDB.Port,     // Your non-standard port 64952
-		c.SageDB.Database, // STANDARD
-		c.SageDB.Username, // LOGIC
-		c.SageDB.Password, // Your password
+		c.SageDB.Host,
+		c.SageDB.Port,
+		c.SageDB.Database,
+		c.SageDB.Username,
+		c.SageDB.Password,
 	)
 }
 

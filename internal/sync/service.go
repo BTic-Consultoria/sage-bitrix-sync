@@ -1,4 +1,3 @@
-// internal/sync/service.go
 package sync
 
 import (
